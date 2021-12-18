@@ -1,0 +1,15 @@
+[04-Apr-2021 14:51:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_directory_uri() in /home/sorappir/public_html/wp-content/themes/Sorapp/Header.php:29
+Stack trace:
+#0 /home/sorappir/public_html/wp-content/themes/Sorapp/index.php(1): include()
+#1 {main}
+  thrown in /home/sorappir/public_html/wp-content/themes/Sorapp/Header.php on line 29
+[04-Apr-2021 14:52:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_directory_uri() in /home/sorappir/public_html/wp-content/themes/Sorapp/Header.php:29
+Stack trace:
+#0 /home/sorappir/public_html/wp-content/themes/Sorapp/index.php(1): include()
+#1 {main}
+  thrown in /home/sorappir/public_html/wp-content/themes/Sorapp/Header.php on line 29
+[22-May-2021 13:42:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_directory_uri() in /home/sorappir/public_html/wp-content/themes/Sorapp/Header.php:30
+Stack trace:
+#0 /home/sorappir/public_html/wp-content/themes/Sorapp/404.php(1): include()
+#1 {main}
+  thrown in /home/sorappir/public_html/wp-content/themes/Sorapp/Header.php on line 30

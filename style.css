@@ -1,0 +1,920 @@
+/*
+    Theme Name: Reza Fta Template
+    Author: Reza Farazi
+    Author URI: https://sorapp.ir
+    Description: Im Java And Php ANd C# Programmer
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+:root
+{
+    --Themplate:#ed555a;
+    --Header-Background:#FFF;
+    --Background:#ececec26;
+    --DarkBackground:#333333;
+    --White:#FFF;
+    --TextColor:#333333;
+    --LinkColor:#333333;
+    --WhiteTextColor:#CCCCCC;
+    --BorderColor:#555555;
+    --ShowdowColor:#35495c15;
+    --PColor:#212529;
+}
+
+
+
+
+@font-face
+{
+    font-family: 'Vazir';
+    src: url("Fonts/Vazir.ttf");
+}
+
+
+
+*::selection
+{
+    background: var(--Themplate);
+    color: var(--White);
+}
+
+
+
+body
+{
+    font-family: Vazir;
+    background: var(--Background);
+    overflow-x: hidden; 
+}
+
+
+
+p,h1,h2,h3,h4,h5,h6
+{
+    color:var(--PColor);
+}
+
+
+
+#Loader_Dialog
+{
+    width: 100%;
+    height: 100%;
+    background: var(--Header-Background);
+    position: fixed;
+    z-index: 99;
+}
+
+
+
+#Loader_Dialog_Inside
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+#Loader_Dialog_Inside_Inside
+{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+}
+
+
+
+#Loader_Component
+{
+    border: var(--White) 8px solid;
+    width: 50px;
+    height: 50px;
+    border-top: 8px solid var(--Themplate);
+    border-radius: 50%;
+    animation: Loading 2s linear infinite;
+}
+
+
+
+@keyframes Loading
+{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+
+
+
+#Menu
+{
+    width: 100%;
+    background: var(--Header-Background);
+    box-shadow: 0 15px 20px rgba(2,9,86,.1);
+    z-index: 999;
+}
+
+
+
+#Menu>ul
+{
+    display: flex;
+    direction: rtl;
+}
+
+
+
+#Menu>ul>li
+{
+    direction: rtl;
+    list-style: none;
+    padding: 35px;
+}
+
+
+
+#Menu>ul>li>a
+{
+    font-family: 'Vazir';
+    text-decoration: none;
+    color: var(--LinkColor);
+}
+
+
+
+#Menu>ul:hover .categories>ul
+{
+    display: block;
+}
+
+
+
+.categories
+{
+    text-align: right;
+    cursor: pointer;
+}
+
+
+
+.categories>ul
+{
+    display: none;
+    box-shadow: 0 15px 20px rgba(2,9,86,.1);
+    padding: 25px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 9;
+    background: var(--White);
+}
+
+
+
+.categories>ul>li
+{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.categories>ul>li>a
+{
+    color: var(--TextColor);
+    text-decoration: none;
+}
+
+
+#login
+{
+    border: 25px;
+    padding: 12px 25px 12px 25px;
+    border-radius: 35px;
+    background: var(--White);
+    color: var(--Themplate) !important;
+    border: 1px solid var(--Themplate);
+}
+
+
+
+#login:hover
+{
+    transition: all 0.4s ease-in-out;
+    background: var(--Themplate);
+    color: var(--White) !important;
+}
+
+
+
+#Sign-in
+{
+    background: var(--Themplate);
+    border: 25px;
+    padding: 12px 25px 12px 25px;
+    border-radius: 35px;
+    color: var(--White) !important;
+}
+
+
+
+#Sign-in:hover
+{
+    transition: all 0.4s ease-in-out;
+    background: var(--White);
+    color: var(--Themplate) !important;
+    border: 1px solid var(--Themplate);
+}
+
+
+
+#Mobile_Menu_Button
+{
+
+    width: 50px;
+    height: 50px;
+    display: none;
+    position: relative;
+}
+
+
+
+#Mobile_Menu_Down_Border,#Mobile_Menu_Top_Border
+{
+    width: 30px;
+    border: 1px solid var(--BorderColor);
+    background:var(--BorderColor);
+    border-radius: 50px;
+    position: absolute;
+}
+
+
+
+#Mobile_Menu_Top_Border
+{
+    top: 28%;
+}
+
+
+
+#Mobile_Menu_Down_Border
+{
+    top: 59%;
+}
+
+
+
+#Mobile_Menu_Icon
+{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+
+
+#Mobile_Menu_Ly
+{
+    width: 100%;
+    height: 80px;
+    background: var(--Header-Background);
+    padding: 14px;
+}
+
+
+
+#Mobile_Menu_Ly
+{
+    display: none !important;
+}
+
+
+
+#Sign-in-Ly
+{
+    margin-right: -30px;
+}
+
+
+
+#Search-Bar-Ly
+{
+    margin-right: 8%;
+}
+
+
+
+#Search_Ly
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 999;
+    top: 0;
+}
+
+
+
+#Search_Ly_Inside
+{
+    top: 30%;
+    position: absolute;
+    width: 100%;
+}
+
+
+#Search_Ly_Inside_Inside
+{
+    position: relative;
+    width: 100%;
+}
+
+
+
+#Search_TextView
+{
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: 15px 10px 15px 10px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
+
+#Close_Search
+{
+    text-decoration: none;
+    color: var(--White);
+    float: right;
+    margin: 20px;
+}
+
+
+
+#Close_Search>i
+{
+    font-size: 28px;
+}
+
+
+
+#Header
+{
+    width: 100%;
+    height: 600px;
+    background: var(--Header-Background);
+    margin-top: -16px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#Header-Inside
+{
+    width: 100%;
+    position: absolute;
+    top: 25%;
+}
+
+
+
+#Header-Inside>center>p
+{
+    font-size: 20px;
+}
+
+
+
+#Context_Header_Text
+{
+    padding: 20px;
+}
+
+
+
+#Context_Header_Text>h4
+{
+    font-family: Vazir;
+    width: 150px;
+    border-bottom: 2px solid var(--Themplate);
+    padding-bottom: 14px;
+}
+
+
+
+.Post_Item
+{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 40px var(--ShowdowColor);
+    padding: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+.Post_Item>center>img
+{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+}
+
+
+
+.Context_Row
+{
+    margin: 5px;
+}
+
+
+
+.Post_Item_Title
+{
+    font-size: 18px;
+    margin: 25px;
+}
+
+
+
+.Post_Item_More_Button
+{
+    margin: 25px;
+    margin-top: 100%;
+    justify-content: end;
+    width: 100%;
+    background: var(--Themplate);
+    padding: 8px 50px 8px 50px;
+    color: var(--White);
+    border-radius: 20px;
+    top: calc(100% - 40px);
+    text-decoration: none;
+}
+
+
+
+.Post_Item_More_Button:hover
+{
+    text-decoration: none;
+    color: var(--White);
+    box-shadow: 0 15px 20px rgba(2,9,86,.1);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.Post_Item_Text
+{
+    max-height: 75px;
+    overflow: hidden;
+}
+
+
+
+#Center_Background_View
+{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    /*background: url("https://www.recruiter.com/i/wp-content/uploads/2018/01/laptop.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+}
+
+
+
+#Center_Background_View_Inside
+{
+    width: 100%;
+    position: absolute;
+    top: 32%;
+}
+
+
+
+#Center_Background_View_Inside>center>h5
+{
+    width: 100px;
+    border-bottom: 2px solid var(--Themplate);
+    padding-bottom: 10px;
+}
+
+
+
+#Footer
+{
+    width: 100%;
+}
+
+
+
+.RTL_CLS
+{
+    direction: rtl !important;
+    text-align: right;
+    text-align: justify;
+    line-height: 35px;
+}
+
+
+
+.fab,.footer-copyright>a
+{
+    color: var(--Themplate);
+}
+
+
+
+#Category_Header>center>h5
+{
+    width: max-content;
+    border-bottom: 2px solid var(--Themplate);
+    padding-bottom: 20px;
+}
+
+
+
+#Single_Header
+{
+    width: 100%;
+    height: 700px;
+    margin-top: -20px;
+    position: relative;
+}
+
+
+
+#Single_Header_Inside_Background
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 2;
+    position: absolute;
+}
+
+
+
+#Single_Header_Inside_Background_Image
+{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+#Single_Header_Inside_Background_Image>img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#Single_Header_Inside_Title
+{
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    z-index: 10;
+}
+
+
+
+#Single_Header_Inside_Title>center>h3
+{
+    line-height: 50px;
+    color: var(--White);
+    border-bottom: 2px solid var(--Themplate);
+    width: 200px;
+    padding-bottom: 20px;
+    text-shadow: 0 15px 20px rgba(2,9,86,.1);
+}
+
+
+
+.Context
+{
+    padding: 15px 30px 15px 15px;
+    margin-top: -75px;
+    z-index: 12;
+}
+
+
+
+.Context_Inside
+{
+    background: var(--Header-Background);
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: justify;
+}
+
+
+.Context_Inside>*
+{
+    color:var(--TextColor);
+}
+
+
+.Context_Inside>p
+{
+    font-size: 16px;
+    line-height: 42px;
+}
+
+
+.Context_Inside>img,.Context_Inside>a>img,.Context_Inside>p>a>img,.Context_Inside>figure>a>img,.Context_Inside>figure>img,.wp-block-image>a>img,.wp-block-image>img
+{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.wp-image-10
+{
+    width: 100%;
+}
+
+
+
+.Ditales
+{
+    margin-top: -75px;
+    z-index: 9;
+    padding: 15px 15px 15px 30px;
+}
+
+
+
+.Ditales_Inside
+{
+    background: var(--Header-Background);
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: justify;
+    direction: rtl;
+}
+
+
+.Ditales_Inside>*
+{
+    color:var(--TextColor);
+}
+
+
+.Ditales_Inside>center>img
+{
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+}
+
+
+
+.Ditales_Inside>center>h6
+{
+    margin-bottom: 14px;
+    line-height: 35px;
+}
+
+
+
+.Ditales_Inside>center>p
+{
+    font-size: 14px;
+}
+
+
+
+.Ditales_Inside>center>table>tbody>tr
+{
+    height: 50px;
+}
+
+
+
+.Comment
+{
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+
+
+#Comment_Email_Textinput
+{
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    padding: 8px;
+}
+
+
+
+#Comment_Text_Textinput
+{
+    outline: none;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    padding: 8px;
+}
+
+
+
+#Comment_Submit_Buttoninput
+{
+    width: 80%;
+    padding: 8px;
+    background: var(--Themplate);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: var(--White);
+}
+
+
+
+.Input-Lable
+{
+    width: 80%;
+}
+
+
+
+.Icon_Main
+{
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px)
+{
+    #Menu
+    {
+        display: block !important;
+        width: 100%;
+        background: var(--Header-Background);
+    }
+
+
+    #Menu>ul
+    {
+        display: flex !important;
+    }
+
+
+    #Mobile_Menu_Ly
+    {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1024px)
+{
+
+    #Mobile_Menu_Ly
+    {
+        display: block !important;
+    }
+
+
+    #Mobile_Menu_Button
+    {
+        display: block;
+    }
+
+    #Menu_Item_Border
+    {
+        display: none;
+    }
+
+    #Mobile_Menu_Icon
+    {
+        display: block;
+        position: absolute;
+        left: 80%;
+    }
+
+    #Mobile_Menu
+    {
+        position: absolute;
+        left: 10%;
+    }
+
+
+    #Menu>ul>li
+    {
+        padding: 20px;
+        text-align: right;
+    }
+
+
+    #Menu>ul
+    {
+        padding: 0;
+    }
+
+
+    #Menu
+    {
+        display: inline-flex;
+        display: none;
+        direction: rtl;
+        position: absolute;
+        height: calc(100% - 79px);
+        margin-top: -1px;
+    }
+
+    #Computer_Logo
+    {
+        display: none;
+    }
+
+
+    #Sign-in-Ly
+    {
+        margin-right: 0 !important;
+    }
+
+
+    #Search-Bar-Ly
+    {
+        margin-right: 0;
+    }
+
+
+    #Search_TextView
+    {
+        width: 80%;
+    }
+
+
+    #Single_Header
+    {
+        height: 500px;
+        margin-top: 0;
+    }
+
+
+    #Single_Header_Inside_Background_Image>img
+    {
+        width:auto;
+        height:100%;
+        margin-left:-50%;
+    }
+
+    .Ditales,.Context
+    {
+        padding: 25px;
+    }
+
+
+    .Ditales
+    {
+        margin-top: 0px;
+    }
+
+
+    .categories>ul
+    {
+        position: relative;
+    }
+}
+
+
